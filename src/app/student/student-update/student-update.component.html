@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col s12 m12">
+      <h3>Update</h3>
+      <form [formGroup]="studentForm" materialize class="col s12">
+  
+        <div class="input-field col s4 m3">
+          <input id="applicant_name" type="text" formControlName="name" class="validate">
+          <label for="applicant_name">Name</label>
+  
+        </div>
+        <div class="input-field col s4 m3">
+          <input id="applicant_fname" type="text" formControlName="fatherName" class="validate">
+          <label for="applicant_fname">Father's Name</label>
+  
+        </div>
+        <div class="input-field col s4 m3">
+          <label for="birthdate">Date Of Birth</label>
+          <input id="birthdate" name="birthdate" formControlName='dob' materialize="pickadate" [materializeParams]="[{selectYears: 30,selectMonths: true,format: 'dd mmmm, yyyy'}]"
+            type="text" />
+  
+        </div>
+        <div class="input-field col s4 m3">
+          <input id="applicant_nic" type="text" formControlName='gender' class="validate">
+          <label for="applicant_nic">Gender</label>
+        </div>
+        <div class="col">
+          <button class="waves-effect waves-light btn" [disabled]='!studentForm.valid' (click)='submit()'>
+            <i class="material-icons right">add</i>Update
+          </button>
+        </div>
+      </form>
+  
+    </div>

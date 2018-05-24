@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+h3{
+    margin: 20px !important
+}
+table{
+    width: 90% !important;
+    margin-left: 5% !important;
+}
+.pagination{
+    margin-left:200px;
+    margin-top:10px 
+}
+td > a{
+    cursor: pointer;
+    color:  #26a69a !important;
+}
